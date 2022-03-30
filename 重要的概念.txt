@@ -1,0 +1,3 @@
+dockerfile：用来创建Images的配置文件
+Images：镜像，相当于包含所有依赖和配置环境的软件安装包
+Containers/Apps：容器，运行软件安装包的容器

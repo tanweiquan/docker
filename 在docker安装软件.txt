@@ -1,0 +1,23 @@
+1、获取镜像：
+                           docker pull  镜像名:镜像版本
+              或者:      docker pull  仓库名:仓库端口/镜像名:版本号
+例子：
+          docker pull ubuntu:12.04
+或者：docker pull dl.dockerpool.com:5000/ubuntu:12.04
+
+2、列出本地镜像：docker images
+镜像的 ID 号（唯一），因此当ID相同时，说明是同一个镜像
+3、修改镜像
+docker commit -m "提交信息" -a "用户信息"   镜像ID号  镜像名:镜像版本号
+
+4、运行镜像：
+docker run -d -p 宿主端口:容器端口 -i -t 镜像:镜像版本号
+-d：后台运行
+-p：指定宿主机与容器的端口映射。宿主 : 容器
+--name：指定容器名称
+-i：以交互模式运行容器，通常与 -t 同时使用
+-t：为容器重新分配一个伪输入终端(docker终端)，通常与 -i 同时使用
+例子：
+docker run -d -p 6379:6379 --name docker_redis redis:5.0.14
+
+
